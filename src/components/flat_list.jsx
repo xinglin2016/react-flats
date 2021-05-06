@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Flat from './flat.jsx';
 
 class FlatList extends Component {
-  renderList = (props) => {
+  renderList = () => {
     return this.props.flats.map((flat, index) => {
-      return <flat flat={flat} key={flat.lat} selected={flat.name === props.selectedFlat.name} index={index} selectFlat={props.selectFlat} />
+      return (<flat flat={flat} key={flat.lat} selected={flat.name === props.selectedFlat.name} index={index} selectFlat={props.selectFlat} />);
     });
   }
 
